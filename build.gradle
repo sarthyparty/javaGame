@@ -80,6 +80,7 @@ project(":core") {
 
 
     dependencies {
+        implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
     }

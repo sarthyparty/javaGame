@@ -10,17 +10,30 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
+import java.sql.SQLException;
+
+import services.*;
+
 public class MyGdxGame implements ApplicationListener {
 	SpriteBatch batch;
 	private TextureAtlas textureAtlas;
 	private Animation<TextureRegion> animation;
 	private float elapsedTime = 0;
+	private Connecter connection;
+
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		textureAtlas = new TextureAtlas(Gdx.files.internal("data/spritesheet.atlas"));
 		animation = new Animation(1/15f, textureAtlas.getRegions());
+		/*
+		try {
+			connection = new Connecter();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		*/
 	}
 
 	@Override
